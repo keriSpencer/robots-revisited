@@ -1,15 +1,21 @@
 body {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  width: 1000px;
+}
+
+.wrapper {
+  display: flex;
   font-family: sans-serif;
   align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -29,6 +35,16 @@ body {
   margin-top: inherit;
   font-weight: 700;
   color: red;
+}
+
+a {
+  text-align: center;
+  max-resolution: res;
+  margin-bottom: inherit;
+  text-decoration: none;
+  font-size: 25px;
+  color: #499ebf;
+  text-align: left;
 }
 
 .eachUser a {
@@ -51,6 +67,7 @@ p {
 
 h1 {
   margin-left: 21px;
+  width: 100px;
 }
 
 html {
@@ -85,20 +102,21 @@ img {
   width: 150px;
 }
 
-/*
-.nameInfo {
-  display: flex;
+li {
+  list-style: none;
+  padding-bottom: 15px;
   flex-direction: column;
-}*/
-/*
-.topRow {
-  width: 41em;
+  display: flex;
 }
 
-.topRow h1 {
-  margin: 0;
+ul {
+  margin-left: 10px;
+  margin-right: 13px;
+  align-items: flex-start;
+  height: 400px;
+  width: 250px;
 }
 
-dd {
-  margin: 0;
-}*/
+#name {
+  font-weight: bold;
+}

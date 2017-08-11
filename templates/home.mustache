@@ -7,24 +7,17 @@
   </head>
   <body>
     <h1>Index</h1>
-    <div class="container">
-        {{ #users }}
-          <div class="eachUser">
 
-          <img src="{{ avatar }}" alt="user photo">
-          <a href="/info/{{id}} ">{{ name }}</a>
-
-
-          {{#job}}
-          {{ job }},
-          {{/job}}
-          {{^job}}
-            <span id="available">Available for hire</span>
-          {{/job}}
-          {{ company }}
-        </div>
-
-      {{ /users }}
+    <div class="wrapper">
+      {{#robots}}
+        <ul>
+          <li><img src="{{avatar}}" alt="robot image"></li>
+          <li id="name"><a href="/info/{{id}}">{{name}}</a></li>
+          <li>{{job}}</li>
+          <li>{{company}}</li>
+        </ul>
+        {{/robots}}
     </div>
+    <!-- <script src="home.js"></script> -->
   </body>
 </html>

@@ -9,6 +9,7 @@
     <div class="nameInfo">
       <div class="topRow">
         <figure>
+          {{#robots}}
           <img src="{{ avatar }}" alt="avatar">
         </figure>
         <h1>{{ name }}</h1>
@@ -42,6 +43,7 @@
         {{#skills}}
         <dd>{{.}}</dd>
         {{/skills}}
+        {{/robots}}
       </span>
       </dl>
     </div>
