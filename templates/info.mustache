@@ -3,7 +3,96 @@
   <head>
     <meta charset="utf-8">
     <title>User Info</title>
-    <link rel="stylesheet" href="/styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style media="screen">
+    body {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+font-family: sans-serif;
+align-items: center;
+}
+
+.container {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+}
+
+.eachUser {
+height: 260px;
+width: 249px;
+border: 0.5px solid #ccc;
+margin: 11px;
+padding: 5px 31px 19px 31px;
+flex-direction: column;
+display: flex;
+text-align: start;
+}
+
+#available {
+text-align: center;
+margin-top: inherit;
+font-weight: 700;
+color: red;
+}
+
+.eachUser a {
+text-align: center;
+margin-bottom: inherit;
+text-decoration: none;
+font-size: 25px;
+color: #499ebf;
+}
+
+img {
+margin: 17px;
+float: left;
+align-content: center;
+}
+
+p {
+margin: 13px 0 0 0;
+}
+
+h1 {
+margin-left: 21px;
+}
+
+html {
+display: flex;
+flex-direction: column;
+align-content: center;
+}
+
+dt {
+float: left;
+font-weight: bold;
+text-align: right;
+display: block;
+width: calc(150px + 1.5em);
+margin-bottom: 0.5em;
+}
+
+dd {
+margin-left: calc(150px + 3em);
+margin-bottom: 0.5em;
+}
+
+.topRow {
+width: 30em;
+margin-left: 1em;
+}
+
+img {
+border: thin solid #666;
+border-radius: 50%;
+padding: 0.5em;
+width: 150px;
+}
+
+    </style>
   </head>
   <body>
     <div class="nameInfo">
@@ -11,12 +100,12 @@
         <figure>
           {{#robots}}
           <img src="{{ avatar }}" alt="avatar">
+
         </figure>
         <h1>{{ name }}</h1>
         <span>
-          {{#address.city}}
-          {{address.city}},
-          {{/address.city}}
+          {{city}},
+
           {{ address.country }} |
 
           {{#job}}
@@ -37,14 +126,8 @@
         <dt id="edu">Education </dt>
         <dd>{{university}}</dd>
         {{/university}}
+      {{/robots}}
 
-      <span>
-        <dt>Skills</dt>
-        {{#skills}}
-        <dd>{{.}}</dd>
-        {{/skills}}
-        {{/robots}}
-      </span>
       </dl>
     </div>
   </body>
