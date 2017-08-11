@@ -11,7 +11,7 @@ const mustacheExpress = require('mustache-express')
 //    "street_number" integer,
 //    "address" text,
 //    "city" text,
-//    "state"ma text,
+//    "state" text,
 //    "job" text,
 //    "company" text,
 //    "postal_code" integer,
